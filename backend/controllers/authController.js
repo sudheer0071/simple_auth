@@ -99,3 +99,6 @@ exports.getCurrentUser = async (req, res) => {
     res.status(500).json({ message: 'Something went wrong' });
   }
 };
+exports.printIt = (req, res) => {
+  return res.status(200).json({ message: 'Hello World' });
+};
