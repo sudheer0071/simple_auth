@@ -11,15 +11,16 @@ const app = express();
 
 app.use(
   cors({
-    origin: ['https://simple-auth-wivv-frontend.vercel.app'],
-    methods: ['POST', 'GET'],
+    origin: 'https://simple-auth-wivv-frontend.vercel.app',
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
-    allowedHeaders: ['Content-Type', 'Authorization'], // Add specific headers if necessary
   })
 );
 
 app.use(express.json());
 
+app.options('*', cors());
 app.use('/api', authRoutes);
 
 const PORT = process.env.PORT || 5000;
