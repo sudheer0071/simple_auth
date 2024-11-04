@@ -12,7 +12,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        'https://simple-auth-backend-gv28.onrender.com/api/login',
+        'https://simple-auth-1ysr-backend.vercel.app/login',
         {
           // Updated URL
           method: 'POST',

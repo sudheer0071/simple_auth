@@ -13,7 +13,7 @@ const SignUp = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        'https://simple-auth-backend-gv28.onrender.com/api/signup',
+        'https://simple-auth-1ysr-backend.vercel.app/signup',
         {
           // Updated URL
           method: 'POST',
