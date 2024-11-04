@@ -12,10 +12,7 @@ const app = express();
 app.use(
   cors({
     origin: 'https://simple-auth-wivv-frontend.vercel.app',
-    mode: 'no-cors',
     methods: ['GET', 'POST', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
   })
 );
 
