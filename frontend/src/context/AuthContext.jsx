@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
 
     try {
       const response = await fetch(
-        'https://simple-auth-1ysr-backend.vercel.app/current-user',
+        'https://simple-auth-1ysr-backend.vercel.app/api/current-user',
         {
           // Updated URL
           headers: {
