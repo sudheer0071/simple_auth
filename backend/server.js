@@ -10,7 +10,9 @@ connectDB();
 const app = express();
 app.use(
   cors({
-    origin: ['https://simple-auth-frontend-fr0k.onrender.com'],
+    origin: [
+      'https://simple-auth-wivv-frontend-qgo9mov7v-prajjawal12s-projects.vercel.app/',
+    ],
     methods: ['POST', 'GET'],
     credentials: true,
   })
