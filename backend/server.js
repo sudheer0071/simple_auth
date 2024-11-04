@@ -10,7 +10,7 @@ connectDB();
 const app = express();
 app.use(
   cors({
-    origin: [''],
+    origin: ['https://simple-auth-frontend-fr0k.onrender.com'],
     methods: ['POST', 'GET'],
     credentials: true,
   })
