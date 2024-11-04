@@ -12,7 +12,7 @@ router.post('/signup', signup);
 router.post('/login', login);
 router.get('/users', authMiddleware, getUsers);
 router.get('/current-user', getCurrentUser);
-router.get('/hello-word', function printIt() {
+router.get('/hello-world', function printIt() {
   return 'Hello World';
 });
 module.exports = router;
