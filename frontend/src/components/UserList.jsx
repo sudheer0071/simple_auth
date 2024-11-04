@@ -17,13 +17,16 @@ const UserList = () => {
       setError(null);
       console.log('Fetching users...');
       try {
-        const response = await fetch('http://localhost:5000/api/users', {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await fetch(
+          'https://simple-auth-backend-gv28.onrender.com/api/users',
+          {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
         console.log('Response status:', response.status);
         if (!response.ok) {

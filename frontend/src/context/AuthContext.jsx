@@ -13,11 +13,15 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem('token', userToken);
 
     try {
-      const response = await fetch('http://localhost:5000/api/current-user', {
-        headers: {
-          Authorization: `Bearer ${userToken}`,
-        },
-      });
+      const response = await fetch(
+        'https://simple-auth-backend-gv28.onrender.com/api/current-user',
+        {
+          // Updated URL
+          headers: {
+            Authorization: `Bearer ${userToken}`,
+          },
+        }
+      );
       const userData = await response.json();
       setUser(userData);
       localStorage.setItem('user', JSON.stringify(userData));
