@@ -8,13 +8,16 @@ dotenv.config();
 connectDB();
 
 const app = express();
+
 app.use(
   cors({
     origin: ['https://simple-auth-wivv-frontend.vercel.app'],
     methods: ['POST', 'GET'],
     credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization'], // Add specific headers if necessary
   })
 );
+
 app.use(express.json());
 
 app.use('/api', authRoutes);

@@ -1,6 +1,7 @@
 import { createContext, useState } from 'react';
 
 export const AuthContext = createContext();
+
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
     const userData = localStorage.getItem('user');
@@ -16,7 +17,6 @@ export const AuthProvider = ({ children }) => {
       const response = await fetch(
         'https://simple-auth-1ysr-backend.vercel.app/api/current-user',
         {
-          // Updated URL
           headers: {
             Authorization: `Bearer ${userToken}`,
           },
