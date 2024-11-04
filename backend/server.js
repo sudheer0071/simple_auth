@@ -6,13 +6,11 @@ const cors = require('cors');
 
 dotenv.config();
 connectDB();
-
+//edited th file
 const app = express();
-
 app.use(
   cors({
     origin: 'https://simple-auth-wivv-frontend.vercel.app',
-    methods: ['GET', 'POST', 'OPTIONS'],
   })
 );
 
