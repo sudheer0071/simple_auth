@@ -12,7 +12,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        'https://simple-auth-1ysr-backend.vercel.app/api/login',
+        'https://assignment1.sudheer.tech/api/login',
         {
           // Updated URL
           method: 'POST',

@@ -18,7 +18,7 @@ const UserList = () => {
       console.log('Fetching users...');
       try {
         const response = await fetch(
-          'https://simple-auth-backend-gv28.onrender.com/api/users',
+          'https://assignment1.sudheer.tech/api/users',
           {
             method: 'GET',
             headers: {

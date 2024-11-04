@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
 
     try {
       const response = await fetch(
-        'https://simple-auth-1ysr-backend.vercel.app/api/current-user',
+        'https://assignment1.sudheer.tech/api/current-user',
         {
           headers: {
             Authorization: `Bearer ${userToken}`,
